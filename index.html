@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABM de Personas</title>
+    <link rel="stylesheet" href="css\estilos.css">
+</head>
+<body>
+    <div class="spinnerContainer" id="spinnerContainer"> 
+        <div class="spinner" id="spinner"></div>
+    </div>
+    <div id="FormularioLista" class="FormularioContainer">
+        <h2>Lista de Personas</h2>
+        <table id="TablaPersonas">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Fecha de Nacimiento</th>
+                    <th>DNI</th>
+                    <th>Pais de Origen</th>
+                    <th>Modificar</th>
+                    <th>Eliminar</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <button class="BotonAgregar" id="BotonAgregar">Nueva Persona</button>
+    </div>
+    <div class="ABMContainer">
+        <div id="FormularioABM" class="FormABM" style="display: none;">
+            <h1 id="HeaderABM">Formulario ABM</h1>
+            <p>ID: <input type="number" id="IdABM" readonly></p>
+            <p>Nombre: <input type="text" id="NombreABM" placeholder="Nombre"></p>
+            <p>Apellido: <input type="text" id="ApellidoABM" placeholder="Apellido"></p>
+            <p>Fecha de Nacimiento: <input type="number" id="FechaNacimientoABM" placeholder="FechaNacimiento (formato: AAAAMMDD)"></p>
+            <p>Tipo:
+                <select id="TipoPersonaSelect">
+                    <option value="Ciudadano">Ciudadano</option>
+                    <option value="Extranjero">Extranjero</option>
+                </select>
+            </p>
+            <div id="Ciudadano">
+                <p>DNI: <input type="number" id="DniABM" placeholder="DNI"></p>
+            </div>
+            <div id="Extranjero" style="display: none;">
+                <p>Pais de Origen: <input type="text" id="PaisOrigenABM" placeholder="Pais de Origen"></p>
+            </div>
+            <button class="BotonAceptar" type="button" id="BotonAceptar">Aceptar</button>
+            <button class="BotonConfirmBaja" type="button" id="BotonConfirmBaja">Confirmar Baja</button>
+            <button class="BotonCancelar" type="button" id="BotonCancelar">Cancelar</button>
+        </div>
+    </div>
+    <script src="js\Persona.js"></script>
+    <script src="js\main.js"></script>
+</body>
+</html>
